@@ -27,7 +27,7 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
-    "@satoshibits/react-json-schema-builder": "^1.1.6",
+    "@satoshibits/react-json-schema-builder": "^1.4.0",
     "ajv": "^8.17.1",
     "json-schema": "^0.4.0",
     "react": "^19.0.0",
