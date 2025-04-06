@@ -1,8 +1,10 @@
 import {
   SchemaBuilder,
-  numberPlugin,
-  stringPlugin,
-  arrayPlugin,
+  StringConstraintPlugin,
+  NumberConstraintPlugin,
+  ArrayConstraintPlugin,
+  ObjectConstraintPlugin,
+  EnumConstraintPlugin,
 } from "@satoshibits/react-json-schema-builder";
 import type { JSONSchema7 } from "json-schema";
 import { useMemo, useState } from "react";
@@ -35,7 +37,13 @@ const Dev = () => {
       <div className="mt-6">
         <SchemaBuilder
           initialSchema={testSchema}
-          plugins={[numberPlugin, stringPlugin, arrayPlugin]}
+          plugins={[
+            NumberConstraintPlugin,
+            StringConstraintPlugin,
+            ArrayConstraintPlugin,
+            ObjectConstraintPlugin,
+            EnumConstraintPlugin,
+          ]}
           onSchemaChange={(schema) => {
             setSchema(schema);
             console.log("onSchemaChange", schema);
